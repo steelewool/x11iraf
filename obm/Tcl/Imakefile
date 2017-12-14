@@ -142,6 +142,8 @@ XCOMM - The following are for AIX on Rs/6000
       CCOPTIONS = -I.. -I${SRC_DIR} ${AC_FLAGS} ${PL_FLAGS} ${GCC_FLAGS} \
                   -DTCL_LIBRARY=\"${TCL_LIBRARY}\"
 
+CCOPTIONS += -DUSE_STDARG
+
 UNIX_OBJS = \
 	panic.o tclEnv.o tclGlob.o tclMain.o tclUnixAZ.o \
 	tclUnixStr.o tclUnixUtil.o

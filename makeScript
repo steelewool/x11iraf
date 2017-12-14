@@ -1,0 +1,50 @@
+#!/bin/bash
+make clean
+rm bin*/*
+
+xmkif
+make World
+
+cd xaw3d
+make all install
+
+cd ../cdl
+make
+make all install
+
+cd ../ximtool/clients
+rm x_ism.o libpkg.a
+make all install
+cd ..
+
+cd ../ximtool
+make all install
+
+cd ../xtapemon
+make all install
+
+cd ../obmsh
+make all install
+
+cd ../obm/Tcl
+make all install
+cd ..
+
+cd ../obm/ObmW
+make all install
+cd ..
+
+cd ../obm
+make all install
+
+cd ../xpm
+make all install
+
+cd ../xgterm
+make all install
+
+
+
+
+
+

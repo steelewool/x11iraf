@@ -1886,7 +1886,15 @@ CleanupChildren(interp, numPids, pidPtr, errorId, keepNewline)
 {
     int result = TCL_OK;
     int i, pid, length, abnormalExit;
-    WAIT_STATUS_TYPE waitStatus;
+    /*
+     * Rob Steele trying to get this to build. The following line
+     * has the error:
+       tclUnixAZ.c:1889:22: error: storage size of -F¡waitStatus¢ isn¢t known-A
+          WAIT_STATUS_TYPE waitStatus;
+    */
+
+    /* WAIT_STATUS_TYPE waitStatus; */
+    int waitStatus;
 
     abnormalExit = 0;
     for (i = 0; i < numPids; i++) {

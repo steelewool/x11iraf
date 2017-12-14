@@ -27,6 +27,7 @@ X11IRAFDIR = ../../
         CCOPTIONS =
 #endif
 
+CCOPTIONS += -DUSE_STDARG
 
 
 HEADERS = \
